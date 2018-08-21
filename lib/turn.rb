@@ -12,16 +12,16 @@ end
 
 def valid_move?(board, index)
   
-  def position_taken?(array, ind)
-    if array[ind] == " " || array[ind] == "" || array[ind] == nil
+  def position_taken?(board, index)
+    if board[index] == " " || board[index] == "" || board[index] == nil
       return false
-    else 
-      return true 
+    elsif board[index] == "X" || board[index] == "O"
+      return true
     end 
   end 
   
-  def on_board?(num)
-    if num.between?(0, 8) == true  
+  def on_board?(index)
+    if index.between?(0, 8) == true  
       return true 
     else 
       return false 
@@ -46,11 +46,13 @@ def turn(board)
   index = input_to_index(num)
   
   if valid_move?(board, index) == true 
-    
+  
     move(board, index)
     display_board(board)
   else  
     turn(board)
   end 
   
+
+
 end 
