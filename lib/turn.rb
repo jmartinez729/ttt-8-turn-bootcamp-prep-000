@@ -51,6 +51,6 @@ def turn(board)
     turn(board)
   end 
   
-  move(board, user_input)
+  move(board, index)
 
 end 
