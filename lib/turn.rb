@@ -17,6 +17,8 @@ def valid_move?(board, index)
       return false
     elsif array[ind] == "X" || array[ind] == "O"
       return true
+    else 
+      return false
     end 
   end 
   
